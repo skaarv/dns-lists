@@ -1,0 +1,19 @@
+[Adblock Plus]
+! Title: skaarv allowlist
+! Description: Domains HaGeZi Pro++ blocks that we actually need. Used by AdGuard Home (10.99.10.4) and Pi-hole (10.99.10.5, 10.99.10.6).
+! Homepage: https://github.com/skaarv/dns-lists
+! Syntax: @@||domain^ allows the domain and all its subdomains.
+!
+! Keep this short and specific: allow the exact host that broke, never a whole
+! platform (amazonaws.com, cloudfront.net, ...), which would unblock thousands
+! of ad and tracker hosts underneath it.
+!
+! Candidates from the old hg1978 allowlist that HaGeZi blocks and that may be
+! needed for playback or page content. Uncomment one if something breaks.
+! @@||npr-news.streaming.adswizz.com^
+! @@||image.ard.de^
+! @@||image-ard-de-cddc.at-o.net^
+! @@||ad-client.mediafe-prd.s.joyn.de^
+! @@||cdn3.optimizely.com^
+! @@||s0.2mdn.net^
+! @@||v.shopify.com^

@@ -1,0 +1,22 @@
+[Adblock Plus]
+! Title: skaarv blocklist
+! Description: Personal blocks layered on top of HaGeZi Pro++. Used by AdGuard Home (10.99.10.4) and Pi-hole (10.99.10.5, 10.99.10.6).
+! Homepage: https://github.com/skaarv/dns-lists
+! Syntax: ||domain^ blocks the domain and all its subdomains.
+!
+! Firefox DNS-over-HTTPS canary: must answer NXDOMAIN (not 0.0.0.0) so Firefox
+! keeps using these resolvers instead of bypassing them with DoH.
+! AdGuard honours $dnsrewrite; Pi-hole skips this line and handles the canary
+! natively (dns.specialDomains.mozillaCanary).
+||use-application-dns.net^$dnsrewrite=NXDOMAIN
+!
+! Telemetry, blocked on purpose (the old allows only existed to quiet the logs)
+||trace.svc.ui.com^
+||collector.github.com^
+||collector-cdn.github.com^
+||analytics.plex.tv^
+||cf.iadsdk.apple.com^
+!
+! Misc
+||unity3d.com^
+||tapi.pureapk.com^
